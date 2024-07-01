@@ -10,3 +10,6 @@ clean:
 up:
 	stack setup
 	stack build
+
+test:
+	stack test

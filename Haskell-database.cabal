@@ -1,4 +1,4 @@
-cabal-version:       3.4
+cabal-version:       3.8
 
 -- This is a comment describing your Cabal file.
 name:                Haskell-database
@@ -17,7 +17,16 @@ custom-setup
 
 executable Haskell-database-exe
   main-is:             Main.hs
-  other-modules:       Test
+  other-modules:       Database.Core Database.Types Operations.Add Operations.Search Operations.Delete
   build-depends:       base >= 4.7 && < 5
   hs-source-dirs:      src
+  default-language:    Haskell2010
+
+test-suite Haskell-database-test
+  type:                exitcode-stdio-1.0
+  main-is:             Spec.hs
+  hs-source-dirs:      test
+  build-depends:       base >= 4.7 && < 5
+                     , hspec
+                     , Haskell-database
   default-language:    Haskell2010
