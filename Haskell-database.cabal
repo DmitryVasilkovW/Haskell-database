@@ -1,0 +1,23 @@
+cabal-version:       3.4
+
+-- This is a comment describing your Cabal file.
+name:                Haskell-database
+version:             0.1.0.0
+synopsis:            Simple database in haskell.
+description:         A simple implementation of a database system in Haskell, providing functions for adding, searching, and deleting records.
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Dmitry Vasilkov
+maintainer:
+category:            Database
+build-type:          Simple
+
+custom-setup
+  setup-depends:       base, Cabal
+
+executable Haskell-database-exe
+  main-is:             Main.hs
+  other-modules:       Test
+  build-depends:       base >= 4.7 && < 5
+  hs-source-dirs:      src
+  default-language:    Haskell2010
